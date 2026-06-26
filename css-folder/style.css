@@ -10,3 +10,6 @@
     .btn:hover {
       background: #005fa3;
     }
+body {
+     background: linear-gradient(135deg, #0f0f0f, #1a1a2e);
+}
