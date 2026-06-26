@@ -1,0 +1,76 @@
+ body {
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    line-height: 1.8;
+    color: #e0e0e0; /* 完全に真っ白ではなく、少し目に優しい洗練された白 */
+    background-color: #121212; /* 高級感があり引き締まった深い黒 */
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 0 24px;
+  }
+
+  /* 冒頭のリード文を目立たせる設定 */
+  .lead-text {
+    font-size: 1.1rem;
+    color: #ffffff;
+    border-left: 4px solid #00ffcc; /* アクセントとしてネオン系のサイバーグリーンを配置 */
+    padding-left: 15px;
+    margin-bottom: 40px;
+  }
+
+  /* 見出し（H2）をストリート風にかっこよく装飾 */
+  h2 {
+    font-size: 1.4rem;
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-bottom: 1px solid #333333; /* 暗めの境界線 */
+    padding-bottom: 8px;
+    margin-top: 45px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* 見出しの左側に付ける小さな四角のアクセント */
+  h2::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 18px;
+    background-color: #00ffcc; /* アクセントカラーと同色 */
+    margin-right: 10px;
+  }
+
+  /* プロフィールリストの装飾 */
+  ul {
+    list-style: none; /* 標準の黒丸を非表示に */
+    padding: 20px;
+    background-color: #1a1a1a; /* 少し明るい黒のボックスで囲む */
+    border-radius: 8px;
+    border: 1px solid #2a2a2a;
+    margin-bottom: 30px;
+  }
+
+  li {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+  }
+
+  li:last-child {
+    margin-bottom: 0; /* 最後の項目の余白をリセット */
+  }
+
+  /* 項目名（生年月日など）の文字色を少し変えてメリハリを出す */
+  li strong {
+    color: #00ffcc; 
+    font-weight: 600;
+    margin-right: 5px;
+  }
+
+  /* 本文の段落 */
+  p {
+    margin-bottom: 1.8rem;
+    font-size: 0.95rem;
+    letter-spacing: 0.03em;
+  }
