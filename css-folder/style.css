@@ -1,23 +1,127 @@
-.btn {
-display: inline-block;
-padding: 10px 20px;
-background: #0078D7;
-color: white;
-text-decoration: none;
-border-radius: 8px;
+/* ===== 全体共通設定 ===== */
+* {
+  box-sizing: border-box;
 }
 
-.btn:hover {
-  background: #005FA3;
-}
 body {
-      background: linear-gradient(135deg, #0F0F0F, #1A1A2E);
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0F0F0F, #1A1A2E);
+  font-family: "Hiragino Sans", "Yu Gothic", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.8;
+  padding: 0 20px 60px;
+}
+
+/* ===== ヘッダー ===== */
+header {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 60px 0 30px;
+  text-align: center;
 }
 
 h1 {
-  color: #FFFFFF
+  color: #FFFFFF;
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  letter-spacing: 0.05em;
+  margin: 0 0 16px;
+  text-shadow: 0 0 20px rgba(0, 120, 215, 0.5);
+}
+
+/* ===== 本文 ===== */
+main {
+  max-width: 720px;
+  margin: 0 auto;
 }
 
 p {
-  color: #FFFFFF
+  color: #E0E0E0;
+  font-size: 1rem;
+  margin: 0 0 16px;
+}
+
+header p {
+  color: #B0B0B0;
+  font-weight: bold;
+}
+
+/* ===== ボタンエリア ===== */
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+@media (min-width: 600px) {
+  .btn-group {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* ===== ボタン本体 ===== */
+.btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #0078D7, #00C6FF);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+  overflow: hidden;
+  isolation: isolate;
+  box-shadow: 0 4px 15px rgba(0, 120, 215, 0.3);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-icon {
+  font-size: 1.2em;
+  transition: transform 0.25s ease;
+}
+
+/* 光が走るアニメーション */
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
+  transform: skewX(-20deg);
+  z-index: -1;
+  transition: left 0.5s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 25px rgba(0, 198, 255, 0.5);
+}
+
+.btn:hover::before {
+  left: 125%;
+}
+
+.btn:hover .btn-icon {
+  transform: rotate(15deg) scale(1.2);
+}
+
+.btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* ===== スマホ対応の微調整 ===== */
+@media (max-width: 480px) {
+  header {
+    padding: 40px 0 20px;
+  }
+  .btn {
+    width: 100%;
+    padding: 14px 20px;
+  }
 }
