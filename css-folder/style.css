@@ -1,23 +1,23 @@
 .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      background: #0078d7;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-    }
+display: inline-block;
+padding: 10px 20px;
+background: #0078D7;
+color: white;
+text-decoration: none;
+border-radius: 8px;
+}
 
-    .btn:hover {
-      background: #005fa3;
-    }
+.btn:hover {
+  background: #005FA3;
+}
 body {
-     background: linear-gradient(135deg, #0f0f0f, #1a1a2e);
+      background: linear-gradient(135deg, #0F0F0F, #1A1A2E);
 }
 
 h1 {
-  color: #ffffff
+  color: #FFFFFF
 }
 
 p {
-  color: #ffffff
+  color: #FFFFFF
 }
